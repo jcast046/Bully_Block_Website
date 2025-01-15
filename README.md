@@ -1,8 +1,14 @@
-# -> [Project Website](https://jcast046.github.io/Bully_Block/) <-
+# -> [Bully_Block_Website](https://jcast046.github.io/Bully_Block_Website/) <-
+# Team Silver
 # Team Members 
-  Trevor Newberry, Jacob Braley, Joshua Castillo, 
-  Reagan McCoy, Skyler Williams, Nomar Rodriguez, Peter Spadaro
-
+- **Joshua Castillo** - 	 jcast046@odu.edu // Github: jcast046
+- **Jacob Braley** - 	 jbral001@odu.edu // GitHub: JayBraley
+- **Reagan McCoy** - 	 rmcco008@odu.edu // Github: rmcco008
+- **Skyler Williams** - 	 swill168@odu.edu // Github: SWilliamsGit & CSswill168
+- **Nomar Rodriguez** - nrodr015@odu.edu //  GitHub: Nrodr015
+- **Trevor Newberry** - 	 tnewb003@odu.edu // GitHub: trevornewberry
+- **Peter Spadaro** - 	 pspad001@odu.edu // GitHub: PeterSpadaro
+  
 ## Overview
 The Cyberbullying Detection System is a web application designed to enhance the safety and educational quality of K-12 public schools by integrating directly with the Canvas Learning Management System (LMS). This system uses advanced Natural Language Processing (NLP) techniques to monitor, analyze, and alert on potential cyberbullying communications in real time.
 
