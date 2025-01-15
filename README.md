@@ -1,4 +1,5 @@
-# -> [Project Website](https://jcast046.github.io/Bully_Block_Website/) <-
+# -> [Bully_Block_Website](https://jcast046.github.io/Bully_Block_Website/) <-
+# Team Silver
 # Team Members 
 - **Joshua Castillo** - 	 jcast046@odu.edu // Github: jcast046
 - **Jacob Braley** - 	 jbral001@odu.edu // GitHub: JayBraley
