@@ -39,3 +39,5 @@ function updateBackgroundPosition() {
 updateBackgroundPosition();
 
 window.addEventListener('scroll', updateBackgroundPosition);
+
+//Test
