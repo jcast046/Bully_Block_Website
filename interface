@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface - BullyBlock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <img src="images/logo3-white.png" alt="logo!">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Overview</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="team.html">Team Bio</a></li>
+                    <li><a href="presentations.html">Presentations</a>
+                    <li><a href="process.html">Process</a></li>
+                    <li><a href="interface.html">Interface</a></li>
+                    <li><a href="task.html">Task</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="interface">
+            <h2>Interface</h2>
+            <p>The BullyBlock system provides an intuitive and user-friendly interface with the following components:</p>
+            <ul>
+                <li><strong>Dashboard</strong>: Displays cyberbullying incidents and alerts.</li>
+                <li><strong>Incident Review Panel</strong>: Allows administrators to review flagged messages.</li>
+                <li><strong>Settings</strong>: Configuration options for detection sensitivity and notifications.</li>
+                <li><strong>Reports</strong>: Provides analytical insights on cyberbullying trends.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact us at <a href="mailto:bullyblock2025@gmail.com">bullyblock2025@gmail.com</a></p>
+    </footer>
+</body>
+
+</html>
