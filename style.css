@@ -11,7 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-image: url('images/bkgd-1.svg'); 
+  background-image: url('images/bkgd-1.svg');
   background-size: auto;
   background-position: bottom;
   background-repeat: repeat;
@@ -36,10 +36,14 @@ header {
   z-index: 100;
   background: #333;
   color: white;
-  padding: 10px 20px; /* Added padding */
-  display: flex; /* Flexbox for layout */
-  justify-content: space-between; /* Space between items */
-  align-items: center; /* Center items vertically */
+  padding: 10px 20px;
+  /* Added padding */
+  display: flex;
+  /* Flexbox for layout */
+  justify-content: space-between;
+  /* Space between items */
+  align-items: center;
+  /* Center items vertically */
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
 }
 
@@ -52,19 +56,26 @@ header .nav-container img {
 header h1 {
   margin-top: 10px;
   font-size: 37px;
-  flex: 1; /* Allow title to take available space */
-  text-align: left; /* Align title to the left */
+  flex: 1;
+  /* Allow title to take available space */
+  text-align: left;
+  /* Align title to the left */
 }
 
 header .download-link {
-  margin-left: auto; /* Push download link to the right */
-  text-align: right; /* Right-align text */
-  color: white; /* Make the link white */
-  text-decoration: none; /* Remove underline */
+  margin-left: auto;
+  /* Push download link to the right */
+  text-align: right;
+  /* Right-align text */
+  color: white;
+  /* Make the link white */
+  text-decoration: none;
+  /* Remove underline */
 }
 
 header .download-link:hover {
-  color: #6fa9ff; /* Change color on hover */
+  color: #6fa9ff;
+  /* Change color on hover */
 }
 
 .squashed-image-container {
@@ -154,7 +165,6 @@ section .section-image {
   text-align: left;
 }
 
-
 .image-matrix {
   display: flex;
   flex-direction: column;
@@ -230,17 +240,25 @@ section .section-image {
 }
 
 .presentation-container {
-  position: relative; /* Allows absolute positioning of children */
-  margin: 40px auto; /* Center the container */
-  text-align: center; /* Center any text within */
-  padding: 20px; /* Add some padding around */
-  max-width: 1000px; /* Set a max width */
+  position: relative;
+  /* Allows absolute positioning of children */
+  margin: 40px auto;
+  /* Center the container */
+  text-align: center;
+  /* Center any text within */
+  padding: 20px;
+  /* Add some padding around */
+  max-width: 1000px;
+  /* Set a max width */
 }
 
 .presentation-container iframe {
-  width: 100%; /* Make iframe responsive */
-  height: 600px; /* Set a fixed height or adjust as needed */
-  border: none; /* Remove default border */
+  width: 100%;
+  /* Make iframe responsive */
+  height: 600px;
+  /* Set a fixed height or adjust as needed */
+  border: none;
+  /* Remove default border */
 }
 
 .docs-container {
@@ -295,7 +313,8 @@ footer a:hover {
   }
 
   .presentation-container iframe {
-    height: 450px; /* Adjust height as needed */
+    height: 450px;
+    /* Adjust height as needed */
   }
 
   section {
@@ -398,20 +417,25 @@ footer a:hover {
   }
 
   nav ul {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items */
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center items */
   }
 
   nav ul li {
-    margin: 10px 0; /* Add some vertical spacing */
+    margin: 10px 0;
+    /* Add some vertical spacing */
   }
 
-  .presentation-container{
-    padding: 5px; /* Reduce padding */
+  .presentation-container {
+    padding: 5px;
+    /* Reduce padding */
   }
 
   .presentation-container iframe {
-    height: 300px; /* Adjust height as needed */
+    height: 300px;
+    /* Adjust height as needed */
   }
 }
 
@@ -457,55 +481,26 @@ footer a:hover {
   }
 }
 
-.poster-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  padding: 20px;
+/* Added styles for #interface section */
+#interface details {
+  margin-bottom: 1rem;
 }
 
-.poster-download {
-  text-align: center;
+#interface summary {
+  cursor: pointer;
+  outline: none;
 }
 
-.download-button {
-  display: inline-block;
-  padding: 15px 30px;
-  background-color: #6fa9ff;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: bold;
-  transition: background-color 0.3s, transform 0.2s;
+#interface summary:hover {
+  text-decoration: underline;
 }
 
-.download-button:hover {
-  background-color: #5a8fe6;
-  transform: translateY(-2px);
+#interface ul {
+  margin: 1rem 0;
+  padding-left: 0;
 }
 
-.poster-preview {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.poster-preview img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 768px) {
-  .poster-container {
-    padding: 10px;
-  }
-  
-  .download-button {
-    padding: 12px 24px;
-    font-size: 16px;
-  }
+#interface li {
+  margin-bottom: 1rem;
+  list-style: none;
 }
