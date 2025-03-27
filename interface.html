@@ -6,20 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interface - BullyBlock</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        ul {
+            margin: 1rem 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <div class="nav-container">
-            <img src="images/logo3-white.png" alt="logo!">
+            <img src="images/logo3-white.png" alt="logo">
             <nav>
                 <ul class="nav-links">
                     <li><a href="features.html">Features</a></li>
                     <li><a href="technology.html">Technology</a></li>
                     <li><a href="team.html">Team Bio</a></li>
-                    <li><a href="process.html">Process</a></li> 
+                    <li><a href="process.html">Process</a></li>
                     <li><a href="interface.html">Interface</a></li>
-                    <li><a href="task.html">Task</a></li> 
+                    <li><a href="task.html">Task</a></li>
                     <li><a href="presentations.html">Presentations</a></li>
                     <li><a href="labs.html">CS410 Labs</a></li>
                     <li><a href="CS411WLabs.html">CS411W Labs</a></li>
@@ -33,12 +43,46 @@
     <main>
         <section id="interface">
             <h2>Interface</h2>
-            <p>The BullyBlock system provides an intuitive and user-friendly interface with the following components:</p>
+            
+            <hr>
+
+            <h3>Pages:</h3>
             <ul>
-                <li><strong>Dashboard</strong>: Displays cyberbullying incidents and alerts.</li>
-                <li><strong>Incident Review Panel</strong>: Allows administrators to review flagged messages.</li>
-                <li><strong>Settings</strong>: Configuration options for detection sensitivity and notifications.</li>
-                <li><strong>Reports</strong>: Provides analytical insights on cyberbullying trends.</li>
+                <li><strong>Analytics</strong>: Visualizes data and trends related to bullying statistics within the
+                    school and system performance.</li>
+                <li><strong>Home</strong>: Greets the user to the website and provides a brief overview of the other
+                    pages via clickable widgets.</li>
+                <li><strong>Incidents</strong>: A constantly updating table of flagged bullying incidents that contains
+                    the Content ID, User ID, Username, Severity Level, Alert Status, and Timestamp of each incident.
+                    Every incident is clickable and will redirect the user to the Incident Details page.</li>
+                <li><strong>Incident Details</strong>: The set of data associated with a detected cyberbullying event.
+                    This page allows the user to change the status of incidents from “pending review” to “resolved.”
+                </li>
+                <li><strong>Login</strong>: The authentication process through which a user gains access to the
+                    BullyBlock system.</li>
+                <li><strong>Register</strong>: The registration interface allows for the creation of new application
+                    user accounts with role-based privileges.</li>
+            </ul>
+
+            <hr>
+
+            <h3>Common Components:</h3>
+            <ul>
+                <li><strong>Button</strong>: Serves as a trigger for certain actions or processes when pressed.</li>
+                <li><strong>Footer</strong>: Provides supplementary navigation links such as privacy policy, terms of
+                    use, and contact information.</li>
+                <li><strong>Navigation Bar</strong>: Allows users to navigate the platform, with links to core pages
+                    like Home, Analytics, and Incidents.</li>
+                <li><strong>Notification Pop-Up</strong>: Displays a pop-up of recent notifications that is updated with
+                    each alert.</li>
+            </ul>
+
+            <hr>
+
+            <h3>Specific Components:</h3>
+            <ul>
+                <li><strong>Dashboard Widget</strong>: Visually identifies the key pages that perform the major
+                    functions of the application. Displayed on the landing page once a user logs in.</li>
             </ul>
         </section>
     </main>
