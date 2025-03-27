@@ -414,3 +414,45 @@ footer a:hover {
     height: 300px; /* Adjust height as needed */
   }
 }
+
+#wiki-links {
+  margin-top: 30px;
+}
+
+.wiki-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.wiki-item {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.wiki-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.wiki-item a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  text-align: center;
+}
+
+.wiki-item a:hover {
+  color: #6fa9ff;
+}
+
+@media (max-width: 768px) {
+  .wiki-grid {
+    grid-template-columns: 1fr;
+  }
+}
