@@ -456,3 +456,56 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+.poster-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.poster-download {
+  text-align: center;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #6fa9ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.download-button:hover {
+  background-color: #5a8fe6;
+  transform: translateY(-2px);
+}
+
+.poster-preview {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.poster-preview img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .poster-container {
+    padding: 10px;
+  }
+  
+  .download-button {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}
