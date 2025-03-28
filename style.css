@@ -511,7 +511,7 @@ footer a:hover {
   align-items: center;
   gap: 30px;
   padding: 20px;
-  max-width: 800px;
+  
   margin: 0 auto;
 }
 
@@ -538,7 +538,7 @@ footer a:hover {
 
 .poster-preview {
   width: 100%;
-  max-width: 800px;
+  
   margin: 0 auto;
   overflow: hidden;
   display: flex;
@@ -548,10 +548,7 @@ footer a:hover {
 .poster-preview img {
   width: 100%;
   height: auto;
-  max-height: 100vh;
-  object-fit: contain;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
   display: block;
 }
 
@@ -571,7 +568,7 @@ footer a:hover {
   }
 
   .poster-preview img {
-    max-height: 90vh;
+    
   }
 }
 
