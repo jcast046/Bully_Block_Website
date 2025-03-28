@@ -20,6 +20,10 @@
     flex-direction: column;
     gap: 30px;
     margin: 20px 0;
+    max-width: 75%;
+    height: auto;
+    display: block;
+    margin: auto;
 }
 
 .component-details ul {
