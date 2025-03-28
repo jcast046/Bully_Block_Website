@@ -43,12 +43,14 @@
       <h2>Project Poster</h2>
       <div class="poster-container">
         <div class="poster-download">
-          <a href="images\CS 411W_RevisedPoster_TeamSilver.png" class="download-button" download>
+          <a href="images/CS 411W_RevisedPoster_TeamSilver.png" 
+             class="download-button" 
+             id="download-poster">
             Download Poster (PNG)
           </a>
         </div>
         <div class="poster-preview">
-          <img src="images\CS 411W_RevisedPoster_TeamSilver.png" alt="BullyBlock Poster Preview">
+          <img src="images/CS 411W_RevisedPoster_TeamSilver.png" alt="BullyBlock Poster Preview">
         </div>
       </div>
     </section>
@@ -61,6 +63,27 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const downloadButton = document.getElementById('download-poster');
+      
+      downloadButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Create a temporary link element
+        const link = document.createElement('a');
+        link.href = this.href;
+        link.download = 'BullyBlock_Poster.png';
+        link.style.display = 'none';
+        
+        // Append to body, click, and remove
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
+    });
+  </script>
 </body>
 
 </html> 
