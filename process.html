@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Process - BullyBlock</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="process.css">
 </head>
 
 <body>
@@ -35,6 +36,52 @@
     <main>
         <section id="process">
             <h2>Process</h2>
+
+            <hr>
+
+            <h3>Data Collection:</h3>
+            <h3>Preprocessing:</h3>
+            <h3>How the AI Works</h3>
+            <ul>
+                <details>
+                    <summary><strong>Layman's Terms</strong></summary>
+                    <div class="component-details">
+                        The AI behind Bully Block is like a smart reader that carefully watches how students communicate online through Canvas. Here's how it works:<br>
+                        <br><strong>It Cleans Up What Students Write:</strong><br>
+                        First, it reads the messages and cleans them up — taking out unnecessary symbols, lowercasing everything, and simplifying words so they’re easier to understand.<br>
+                        <br><strong>It Understands The Message:</strong><br>
+                        The system looks at the grammar, what kind of words are used (like emotions or names), and what the message is really saying — kind of like how a teacher can tell if a student is joking or being mean.<br>
+                        <br><strong>It Decides How Serious The Message Is:</strong><br>
+                        Based on tone and certain keywords, the AI gives the message a score — low, medium, or high — depending on whether it seems kind, neutral, or harmful.<br>
+                        <br><strong>It Trains Itself To Get Better:</strong><br>
+                        The AI uses examples of past messages to learn. Some are obvious bullying, others are not. Over time, the AI learns patterns — kind of like how we learn from practice.<br>
+                        <br><strong>It Uses Multiple Brains:</strong><br>
+                        We built different types of AI "brains" — some are fast and basic, others are deep thinkers. Then we compare how they each perform and keep improving them.<br>
+                        <br><strong>It Visualizes Its Learning:</strong><br>
+                        The system shows charts and graphs that help us understand how well it’s learning and if it’s making mistakes — just like report cards!<br>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>Technical Terms</strong></summary>
+                    <div class="component-details">
+                        The Bully Block system uses advanced Natural Language Processing (NLP) and machine learning techniques to detect and classify instances of cyberbullying in real-time. 
+                        Below is a detailed breakdown of the AI pipeline, including the purpose of each tool and how they are applied in our workflow.<br>
+                        <br><strong>Step 1: Text Preprocessing</strong><br>
+                        To ensure messages are analyzed accurately, the system first refines raw text using a preprocessing pipeline powered by NLTK and spaCy.<br>
+                        <strong>NLTK (Natural Language Toolkit)</strong> is a Python library widely used for working with human language data. In our system, it handles:<br>
+                        <ul>
+                            <li>Tokenization – breaking up sentences into individual words or tokens</li>
+                            <li>Stop word removal – filtering out common words like "the", "is", "on", which don't add meaningful value for classification</li>
+                        </ul>
+                        <br><strong>spaCy</strong> is a modern NLP library optimized for performance and accuracy. It performs:<br>
+                        <ul>
+                            <li>Lemmatization – simplifying words to their base or dictionary form (e.g., "running" becomes "run"), which helps models generalize better</li>
+                        </ul>
+                        </div>
+                    </div>
+                </details>
+            </ul>
+
             <p>The process followed in BullyBlock involves multiple steps to ensure effective cyberbullying detection.</p>
             <ul>
                 <li><strong>Data Collection</strong>: Gathering user messages and interactions from Canvas LMS.</li>
