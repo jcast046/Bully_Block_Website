@@ -36,8 +36,8 @@
 /* Specific image size adjustments */
 .screenshot-container img[src*="Dashboard_home.PNG"],
 .screenshot-container img[src*="Incidents_filters.PNG"] {
-    max-width: 50%;
-    width: 50%;
+    max-width: 25%;
+    width: 25%;
 }
 
 .component-details ul {
