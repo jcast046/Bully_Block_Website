@@ -1,0 +1,137 @@
+/* Interface-specific styles */
+.component-details {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin: 10px 0;
+    line-height: 1.8;
+}
+
+.component-details p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    padding: 10px 15px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.screenshot-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.screenshot-container img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    display: block;
+}
+
+/* Specific image size adjustments */
+.screenshot-container img[src*="Dashboard_home.PNG"],
+.screenshot-container img[src*="Incidents_filters.PNG"] {
+    max-width: 50%;
+    width: 50%;
+}
+
+.component-details ul {
+    list-style-type: none;
+    padding-left: 20px;
+    background-color: white;
+    border-radius: 6px;
+    padding: 15px;
+    margin-top: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.component-details ul li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.component-details ul li::before {
+    content: "•";
+    color: #6fa9ff;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Details and Summary Styling */
+details {
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+summary {
+    padding: 15px 20px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    user-select: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+summary:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .screenshot-container {
+        gap: 20px;
+    }
+
+    .component-details {
+        padding: 15px;
+    }
+
+    .component-details p {
+        padding: 8px 12px;
+    }
+
+    details {
+        margin-bottom: 10px;
+    }
+
+    summary {
+        padding: 12px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .screenshot-container img {
+        max-width: 100%;
+    }
+
+    .screenshot-container img[src*="Dashboard_home.png"],
+    .screenshot-container img[src*="Incidents_filters.png"] {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .component-details {
+        padding: 10px;
+    }
+
+    .component-details p {
+        padding: 6px 10px;
+    }
+
+    .component-details ul {
+        padding: 10px;
+    }
+
+    .component-details ul li {
+        font-size: 14px;
+    }
+} 
