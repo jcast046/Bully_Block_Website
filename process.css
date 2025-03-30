@@ -19,11 +19,21 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin: 20px 0;
-    max-width: 75%;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.screenshot-container img {
+    width: 100%;
     height: auto;
+    max-width: 100%;
     display: block;
-    margin: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .component-details ul {
@@ -75,6 +85,7 @@ summary:hover {
 @media (max-width: 768px) {
     .screenshot-container {
         gap: 20px;
+        padding: 0 15px;
     }
 
     .component-details {
@@ -95,12 +106,11 @@ summary:hover {
 }
 
 @media (max-width: 480px) {
-    .screenshot-container img {
-        max-width: 100%;
+    .screenshot-container {
+        padding: 0 10px;
     }
-
-    .screenshot-container img[src*="Dashboard_home.png"],
-    .screenshot-container img[src*="Incidents_filters.png"] {
+    
+    .screenshot-container img {
         max-width: 100%;
         width: 100%;
     }
@@ -120,5 +130,4 @@ summary:hover {
     .component-details ul li {
         font-size: 14px;
     }
-
 } 
