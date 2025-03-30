@@ -401,7 +401,7 @@ footer a:hover {
   .nav-links.open {
     display: flex;
     animation: dropDown 0.5s ease;
-    max-height: 300px;
+    max-height: 800px;
   }
 
   .nav-links.close {
@@ -423,10 +423,7 @@ footer a:hover {
     /* Center items */
   }
 
-  nav ul li {
-    margin: 10px 0;
-    /* Add some vertical spacing */
-  }
+
 
   .presentation-container {
     padding: 5px;
@@ -566,10 +563,6 @@ footer a:hover {
 
   .poster-preview {
     max-width: 100%;
-  }
-
-  .poster-preview img {
-    
   }
 }
 
