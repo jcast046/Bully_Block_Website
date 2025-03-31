@@ -58,7 +58,7 @@
                         <br><strong>It Understands The Message:</strong><br>
                         The system looks at the grammar, what kind of words are used (like emotions or names), and what the message is really saying — kind of like how a teacher can tell if a student is joking or being mean.<br>
                         <br><strong>It Decides How Serious The Message Is:</strong><br>
-                        Based on tone and certain keywords, the AI gives the message a score — low, medium, or high — depending on whether it seems kind, neutral, or harmful.<br>
+                        Based on tone and certain keywords, the AI gives the message a score — zero, low, or high — depending on whether it seems kind, neutral, or harmful.<br>
                         <br><strong>It Trains Itself To Get Better:</strong><br>
                         The AI uses examples of past messages to learn. Some are obvious bullying, others are not. Over time, the AI learns patterns — kind of like how we learn from practice.<br>
                         <br><strong>It Uses Multiple Brains:</strong><br>
@@ -114,7 +114,7 @@
                         <summary><strong>Step 3: Traditional Machine Learning Models (scikit-learn)</strong></summary>
                         <div class="component-details">
                             To create a fast and lightweight baseline model, we use scikit-learn, a widely-used Python machine learning library.<br>
-                            <strong>Logistic Regression:</strong> A statistical model that predicts binary or multi-class outcomes — in our case, low, medium, or high severity.<br>
+                            <strong>Logistic Regression:</strong> A statistical model that predicts binary or multi-class outcomes — in our case, zero, low, or high severity.<br>
                             <strong>Support Vector Machines (SVM):</strong> Classifies text using hyperplanes and margins, often effective for small to medium-sized datasets.<br>
                             <br>Model tuning and validation:<br>
                             <ul>
@@ -180,8 +180,8 @@
                             <div class="component-details">
                                 Each analyzed message is assigned a severity level based on a set of heuristic and model-driven features.<br>
                                 <ul>
-                                    <li><strong>Low:</strong> Clearly neutral or positive messages</li>
-                                    <li><strong>Medium:</strong> Ambiguous tone, moderate negative sentiment, or minor flagged keywords</li>
+                                    <li><strong>Zero:</strong> Clearly neutral or positive messages</li>
+                                    <li><strong>Low:</strong> Ambiguous tone, moderate negative sentiment, or minor flagged keywords</li>
                                     <li><strong>High:</strong> Aggressive tone, multiple flagged terms/entities, strong negative sentiment</li>
                                 </ul>
                                 <strong>Detection logic includes:</strong><br>
@@ -219,7 +219,7 @@
                     "Resolved" and "Pending Review" statuses. Each entry in the table includes:
                     <ul>
                         <li><strong>Content ID, User ID, and Username</strong> of the student involved</li>
-                        <li><strong>Severity Level</strong> categorized as <em>Low, Medium, or High</em></li>
+                        <li><strong>Severity Level</strong> categorized as <em>Zero, Low, or High</em></li>
                         <li><strong>Alert Status</strong>, indicating whether the incident has been addressed by school personnel</li>
                         <li><strong>Timestamp</strong>, displaying the exact date and time of the incident</li>
                     </ul>
