@@ -106,7 +106,8 @@
                                 <ul>
                                     <li><strong>VADER (Valence Aware Dictionary and sEntiment Reasoner)</strong>, part of NLTK, assigns a compound sentiment score (ranging from -1 to +1) to each message.</li>
                                     <li>Token-level scoring evaluates individual words.</li>
-                                    <li>We also compute a sentiment balance metric: positive_score minus negative_score, which becomes an input to the classifier.</li>
+                                    <li>Custom severity lexicon allows for custom score assignment to words deemed extremely severe, increasing liklihood to be flagged.</li>
+                                    <li>We also compute a sentiment balance metric: positive_score minus total_negative, which becomes an input to the classifier.</li>
                                 </ul>
                             </div>
                             </details>
