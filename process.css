@@ -77,6 +77,15 @@ summary {
     transition: background-color 0.3s ease;
 }
 
+.summary-process-headers {
+    font-size: 1.25em;
+    font-weight: bold; 
+}
+
+.summary-no-bullet::-webkit-details-marker {
+    display: none;
+}
+
 summary:hover {
     background-color: #e0e0e0;
 }
