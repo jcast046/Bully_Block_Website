@@ -15,16 +15,13 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-.screenshot-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin: 20px 0;
-    max-width: 75%;
-    height: auto;
+.screenshot-container img {
     display: block;
     margin: auto;
+    max-width: 100%; /* Ensures images don't overflow */
+    height: auto;
 }
+
 
 .component-details ul {
     list-style-type: none;
