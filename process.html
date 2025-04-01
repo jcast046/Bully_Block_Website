@@ -14,6 +14,12 @@
         <div class="nav-container">
             <img src="images/logo3-white.png" alt="logo!">
             <nav>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Overview</a></li>
                     <li><a href="features.html">Features</a></li>
@@ -40,222 +46,229 @@
 
             <hr>
 
-            <h3>Data Collection:</h3>
-            <h3>Preprocessing:</h3>
-            <h3>How the AI Works:</h3>
-                <details>
-                    <summary><strong>Layman's Terms</strong></summary>
-                    <div class="component-details">
-                        The AI behind Bully Block is like a smart reader that carefully watches how students communicate online through Canvas. Here's how it works:<br>
-                        <br><strong>It Cleans Up What Students Write:</strong><br>
-                        First, it reads the messages and cleans them up — taking out unnecessary symbols, lowercasing everything, and simplifying words so they're easier to understand.<br>
-                        <br><strong>It Understands The Message:</strong><br>
-                        The system looks at the grammar, what kind of words are used (like emotions or names), and what the message is really saying — kind of like how a teacher can tell if a student is joking or being mean.<br>
-                        <br><strong>It Decides How Serious The Message Is:</strong><br>
-                        Based on tone and certain keywords, the AI gives the message a score — low, medium, or high — depending on whether it seems kind, neutral, or harmful.<br>
-                        <br><strong>It Trains Itself To Get Better:</strong><br>
-                        The AI uses examples of past messages to learn. Some are obvious bullying, others are not. Over time, the AI learns patterns — kind of like how we learn from practice.<br>
-                        <br><strong>It Uses Multiple Brains:</strong><br>
-                        We built different types of AI "brains" — some are fast and basic, others are deep thinkers. Then we compare how they each perform and keep improving them.<br>
-                        <br><strong>It Visualizes Its Learning:</strong><br>
-                        The system shows charts and graphs that help us understand how well it's learning and if it's making mistakes — just like report cards!<br>
-                    </div>
-                </details>
-                <details>
-                    <summary><strong>Technical Terms</strong></summary>
-                    <div class="component-details">
-                        The Bully Block system uses advanced Natural Language Processing (NLP) and machine learning techniques to detect and classify instances of cyberbullying in real-time. 
-                        Below is a detailed breakdown of the AI pipeline, including the purpose of each tool and how they are applied in our workflow.<br>
-                        <br>
-                        <details>
-                        <summary><strong>Step 1: Text Preprocessing</strong></summary>
+            <details>
+                <summary class="summary-process-headers">How the AI Works:</summary>
+                <div class="component-details">
+                    <details>
+                        <summary><strong>Layman's Terms</strong></summary>
                         <div class="component-details">
-                            To ensure messages are analyzed accurately, the system first refines raw text using a preprocessing pipeline powered by NLTK and spaCy.<br>
-                            <strong>NLTK (Natural Language Toolkit)</strong> is a Python library widely used for working with human language data. In our system, it handles:<br>
-                            <ul>
-                                <li>Tokenization – breaking up sentences into individual words or tokens</li>
-                                <li>Stop word removal – filtering out common words like "the", "is", "on", which don't add meaningful value for classification</li>
-                            </ul>
-                            <strong>spaCy</strong> is a modern NLP library optimized for performance and accuracy. It performs:<br>
-                            <ul>
-                                <li>Lemmatization – simplifying words to their base or dictionary form (e.g., "running" becomes "run"), which helps models generalize better</li>
-                            </ul>
-                            <strong>Regex (Regular Expressions)</strong> is used to:<br>
-                            <ul>
-                                <li>Strip out punctuation, numbers, and special characters that may skew sentiment and feature calculations</li>
-                            </ul>
-                            Normalization includes lowercasing all text to ensure consistent pattern matching.<br>
-                            The goal of this phase is to produce clean, uniform text that’s ready for feature analysis and model training.<br>
+                            The AI behind Bully Block is like a smart reader that carefully watches how students communicate online through Canvas. Here's how it works:<br>
+                            <br><strong>It Cleans Up What Students Write:</strong><br>
+                            First, it reads the messages and cleans them up — taking out unnecessary symbols, lowercasing everything, and simplifying words so they're easier to understand.<br>
+                            <br><strong>It Understands The Message:</strong><br>
+                            The system looks at the grammar, what kind of words are used (like emotions or names), and what the message is really saying — kind of like how a teacher can tell if a student is joking or being mean.<br>
+                            <br><strong>It Decides How Serious The Message Is:</strong><br>
+                            Based on tone and certain keywords, the AI gives the message a score — zero, low, or high — depending on whether it seems kind, neutral, or harmful.<br>
+                            <br><strong>It Trains Itself To Get Better:</strong><br>
+                            The AI uses examples of past messages to learn. Some are obvious bullying, others are not. Over time, the AI learns patterns — kind of like how we learn from practice.<br>
+                            <br><strong>It Uses Multiple Brains:</strong><br>
+                            We built different types of AI "brains" — some are fast and basic, others are deep thinkers. Then we compare how they each perform and keep improving them.<br>
+                            <br><strong>It Visualizes Its Learning:</strong><br>
+                            The system shows charts and graphs that help us understand how well it's learning and if it's making mistakes — just like report cards!<br>
                         </div>
-                        </details>
-                        <details>
-                        <summary><strong>Step 2: Feature Extraction</strong></summary>
+                    </details>
+                    <details>
+                        <summary><strong>Technical Terms</strong></summary>
                         <div class="component-details">
-                            Once the text is cleaned, the system extracts meaningful features to help the AI understand both what is being said and how it's being said.<br>
-                            <strong>Part-of-Speech (POS) Tagging:</strong> Using spaCy, each word is labeled with its grammatical role (noun, verb, adjective, etc.), helping the model interpret context.<br> 
-                            <strong>Named Entity Recognition (NER):</strong> Extracts key names, locations, and dates. This helps in identifying messages that reference real people or events, which may elevate the severity.<br>
-                            <strong>TF-IDF (Term Frequency–Inverse Document Frequency):</strong> A mathematical method that turns text into numeric vectors based on how important a word is in a document relative to all documents. 
-                            This representation is essential for training ML and DL models.<br>
-                            <br>Sentiment Analysis:<br>
-                            <ul>
-                                <li><strong>VADER (Valence Aware Dictionary and sEntiment Reasoner)</strong>, part of NLTK, assigns a compound sentiment score (ranging from -1 to +1) to each message.</li>
-                                <li>Token-level scoring evaluates individual words.</li>
-                                <li>We also compute a sentiment balance metric: positive_score minus negative_score, which becomes an input to the classifier.</li>
-                            </ul>
-                        </div>
-                        </details>
-                        <details>
-                        <summary><strong>Step 3: Traditional Machine Learning Models (scikit-learn)</strong></summary>
-                        <div class="component-details">
-                            To create a fast and lightweight baseline model, we use scikit-learn, a widely-used Python machine learning library.<br>
-                            <strong>Logistic Regression:</strong> A statistical model that predicts binary or multi-class outcomes — in our case, low, medium, or high severity.<br>
-                            <strong>Support Vector Machines (SVM):</strong> Classifies text using hyperplanes and margins, often effective for small to medium-sized datasets.<br>
-                            <br>Model tuning and validation:<br>
-                            <ul>
-                                <li>We use cross-validation to ensure the model works well across different slices of the data.</li>
-                                <li>GridSearchCV helps identify the best hyperparameters (like learning rate and regularization strength).</li>
-                                <li>Learning curve plots are generated to visualize training and test accuracy across different sample sizes.</li>
-                            </ul>
-                        </div>
-                        </details>
-                        <details>
-                        <summary><strong>Step 4: Deep Learning Models (TensorFlow & PyTorch)</strong></summary>
-                        <div class="component-details">
-                            As cyberbullying messages can involve complex context and sequencing, deep learning allows the system to recognize patterns beyond surface-level word frequency.<br>
-                            <br><strong>TensorFlow Models:</strong>
-                            <ul>
-                                <li><strong>CNN (Convolutional Neural Network):</strong></li>
-                                <ul>
-                                    <li>Used to capture localized patterns in text — such as combinations of aggressive words.</li>
-                                    <li>Layers include 1D convolutions, dropout to reduce overfitting, and Batch Normalization for stable training.</li>
-                                </ul>
-                                <li><strong>LSTM (Long Short-Term Memory):</strong></li>
-                                <ul>
-                                    <li>Ideal for understanding the order and relationship between words over a sequence.</li>
-                                    <li>The LSTM is bidirectional and uses embedding layers to convert words into vector space representations.</li>
-                                    <li>We incorporate SpatialDropout1D, ReLU activations, and batch normalization.</li>
-                                </ul>
-                            </ul>
-                            <strong>PyTorch Models:</strong><br>
-                            <ul>
-                                <li>PyTorch offers fine-grained control and faster experimentation during training.</li>
-                                <li><strong>CNNModel</strong> – takes TF-IDF vector inputs and includes multiple convolutional layers, LeakyReLU activations, and dropout.</li>
-                                <li><strong>LSTMModel</strong> – built on tokenized inputs with embedding layers, bidirectional LSTM, and attention mechanisms.</li>
-                                <li><strong>TextDataset class</strong> – A custom PyTorch dataset for efficient batch loading, token padding, and format consistency.</li>
-                            </ul>
-                            <strong>Training safeguards:</strong><br>
-                            <ul>
-                                <li>Fixed dtype issues (e.g., using LongTensor for LSTM and FloatTensor for CNN)</li>
-                                <li>Modular train_pytorch_model() function to encapsulate training and evaluation</li>
-                                <li>Saved checkpoints when validation improves</li>
-                            </ul>
-                        </div>
-                        </details>
-                        <details>
-                            <summary><strong>Step 5: Training and Optimization</strong></summary>
+                            The Bully Block system uses advanced Natural Language Processing (NLP) and machine learning techniques to detect and classify instances of cyberbullying in real-time. 
+                            Below is a detailed breakdown of the AI pipeline, including the purpose of each tool and how they are applied in our workflow.<br>
+                            <br>
+                            <details>
+                            <summary><strong>Step 1: Text Preprocessing</strong></summary>
                             <div class="component-details">
-                                We use different training strategies tailored to each model architecture.<br>
-                                <strong>Optimizers:</strong><br>
+                                To ensure messages are analyzed accurately, the system first refines raw text using a preprocessing pipeline powered by NLTK and spaCy.<br>
+                                <strong>NLTK (Natural Language Toolkit)</strong> is a Python library widely used for working with human language data. In our system, it handles:<br>
                                 <ul>
-                                    <li><strong>LSTM:</strong> Trained with OneCycleLR to gradually increase then decrease learning rate — this helps escape local minima</li>
-                                    <li><strong>CNN:</strong> Trained with ReduceLROnPlateau or CosineAnnealingLR to fine-tune over time</li>
+                                    <li>Tokenization – breaking up sentences into individual words or tokens</li>
+                                    <li>Stop word removal – filtering out common words like "the", "is", "on", which don't add meaningful value for classification</li>
                                 </ul>
-                                <strong>Additional features:</strong><br>
+                                <strong>spaCy</strong> is a modern NLP library optimized for performance and accuracy. It performs:<br>
                                 <ul>
-                                    <li><strong>Gradient clipping:</strong> Prevents large updates from destabilizing training</li>
-                                    <li><strong>Early stopping:</strong> Halts training if no improvement is seen</li>
-                                    <li>Per-batch learning rate scheduling</li>
-                                    <li><strong>Checkpointing:</strong> Automatically saves the best model</li>
+                                    <li>Lemmatization – simplifying words to their base or dictionary form (e.g., "running" becomes "run"), which helps models generalize better</li>
+                                </ul>
+                                <strong>Regex (Regular Expressions)</strong> is used to:<br>
+                                <ul>
+                                    <li>Strip out punctuation, numbers, and special characters that may skew sentiment and feature calculations</li>
+                                </ul>
+                                Normalization includes lowercasing all text to ensure consistent pattern matching.<br>
+                                The goal of this phase is to produce clean, uniform text that’s ready for feature analysis and model training.<br>
+                            </div>
+                            </details>
+                            <details>
+                            <summary><strong>Step 2: Feature Extraction</strong></summary>
+                            <div class="component-details">
+                                Once the text is cleaned, the system extracts meaningful features to help the AI understand both what is being said and how it's being said.<br>
+                                <strong>Part-of-Speech (POS) Tagging:</strong> Using spaCy, each word is labeled with its grammatical role (noun, verb, adjective, etc.), helping the model interpret context.<br> 
+                                <strong>Named Entity Recognition (NER):</strong> Extracts key names, locations, and dates. This helps in identifying messages that reference real people or events, which may elevate the severity.<br>
+                                <strong>TF-IDF (Term Frequency–Inverse Document Frequency):</strong> A mathematical method that turns text into numeric vectors based on how important a word is in a document relative to all documents. 
+                                This representation is essential for training ML and DL models.<br>
+                                <br>Sentiment Analysis:<br>
+                                <ul>
+                                    <li><strong>VADER (Valence Aware Dictionary and sEntiment Reasoner)</strong>, part of NLTK, assigns a compound sentiment score (ranging from -1 to +1) to each message.</li>
+                                    <li>Token-level scoring evaluates individual words.</li>
+                                    <li>Custom severity lexicon allows for custom score assignment to words deemed extremely severe, increasing liklihood to be flagged.</li>
+                                    <li>We also compute a sentiment balance metric: positive_score minus total_negative, which becomes an input to the classifier.</li>
                                 </ul>
                             </div>
-                        </details>
-                        <details>
-                            <summary><strong>Step 6: Classification Logic</strong></summary>
+                            </details>
+                            <details>
+                            <summary><strong>Step 3: Traditional Machine Learning Models (scikit-learn)</strong></summary>
                             <div class="component-details">
-                                Each analyzed message is assigned a severity level based on a set of heuristic and model-driven features.<br>
+                                To create a fast and lightweight baseline model, we use scikit-learn, a widely-used Python machine learning library.<br>
+                                <strong>Logistic Regression:</strong> A statistical model that predicts binary or multi-class outcomes — in our case, zero, low, or high severity.<br>
+                                <strong>Support Vector Machines (SVM):</strong> Classifies text using hyperplanes and margins, often effective for small to medium-sized datasets.<br>
+                                <br>Model tuning and validation:<br>
                                 <ul>
-                                    <li><strong>Low:</strong> Clearly neutral or positive messages</li>
-                                    <li><strong>Medium:</strong> Ambiguous tone, moderate negative sentiment, or minor flagged keywords</li>
-                                    <li><strong>High:</strong> Aggressive tone, multiple flagged terms/entities, strong negative sentiment</li>
-                                </ul>
-                                <strong>Detection logic includes:</strong><br>
-                                <ul>
-                                    <li>Sentiment balance metric</li>
-                                    <li>Presence of flagged names or threat indicators</li>
-                                    <li>Adjective density and part-of-speech ratios</li>
-                                    <li>Dynamic sentiment scaling, boosting strong sentiment and downplaying neutral-heavy messages</li>
+                                    <li>We use cross-validation to ensure the model works well across different slices of the data.</li>
+                                    <li>GridSearchCV helps identify the best hyperparameters (like learning rate and regularization strength).</li>
+                                    <li>Learning curve plots are generated to visualize training and test accuracy across different sample sizes.</li>
                                 </ul>
                             </div>
-                        </details>
-                        <details>
-                            <summary><strong>Step 7: Performance Evaluation</strong></summary>
+                            </details>
+                            <details>
+                            <summary><strong>Step 4: Deep Learning Models (TensorFlow & PyTorch)</strong></summary>
                             <div class="component-details">
-                                To measure how well our system performs:<br>
+                                As cyberbullying messages can involve complex context and sequencing, deep learning allows the system to recognize patterns beyond surface-level word frequency.<br>
+                                <br><strong>TensorFlow Models:</strong>
                                 <ul>
-                                    <li>Loss and accuracy metrics are tracked across training epochs</li>
-                                    <li>Models are compared side-by-side (Logistic Regression, SVM, CNN, LSTM)</li>
-                                    <li>Visualizations are used to analyze:</li>
+                                    <li><strong>CNN (Convolutional Neural Network):</strong></li>
                                     <ul>
-                                        <li>Loss trends (line plots)</li>
-                                        <li>Accuracy comparisons (bar graphs)</li>
+                                        <li>Used to capture localized patterns in text — such as combinations of aggressive words.</li>
+                                        <li>Layers include 1D convolutions, dropout to reduce overfitting, and Batch Normalization for stable training.</li>
                                     </ul>
-                                    <li>Final model selection is based on overall accuracy, stability, and real-world interpretability</li>
+                                    <li><strong>LSTM (Long Short-Term Memory):</strong></li>
+                                    <ul>
+                                        <li>Ideal for understanding the order and relationship between words over a sequence.</li>
+                                        <li>The LSTM is bidirectional and uses embedding layers to convert words into vector space representations.</li>
+                                        <li>We incorporate SpatialDropout1D, ReLU activations, and batch normalization.</li>
+                                    </ul>
+                                </ul>
+                                <strong>PyTorch Models:</strong><br>
+                                <ul>
+                                    <li>PyTorch offers fine-grained control and faster experimentation during training.</li>
+                                    <li><strong>CNNModel</strong> – takes TF-IDF vector inputs and includes multiple convolutional layers, LeakyReLU activations, and dropout.</li>
+                                    <li><strong>LSTMModel</strong> – built on tokenized inputs with embedding layers, bidirectional LSTM, and attention mechanisms.</li>
+                                    <li><strong>TextDataset class</strong> – A custom PyTorch dataset for efficient batch loading, token padding, and format consistency.</li>
+                                </ul>
+                                <strong>Training safeguards:</strong><br>
+                                <ul>
+                                    <li>Fixed dtype issues (e.g., using LongTensor for LSTM and FloatTensor for CNN)</li>
+                                    <li>Modular train_pytorch_model() function to encapsulate training and evaluation</li>
+                                    <li>Saved checkpoints when validation improves</li>
                                 </ul>
                             </div>
-                        </details>
-                    </div>
-                </details>
-                
-
-            <h3>BullyBlock Incident Reports:</h3>
-            <div class="component-details">
-                    On the Incidents page, users can access a comprehensive table of all reported incidents. Reports can be filtered by 
-                    "Resolved" and "Pending Review" statuses. Each entry in the table includes:
+                            </details>
+                            <details>
+                                <summary><strong>Step 5: Training and Optimization</strong></summary>
+                                <div class="component-details">
+                                    We use different training strategies tailored to each model architecture.<br>
+                                    <strong>Optimizers:</strong><br>
+                                    <ul>
+                                        <li><strong>LSTM:</strong> Trained with OneCycleLR to gradually increase then decrease learning rate — this helps escape local minima</li>
+                                        <li><strong>CNN:</strong> Trained with ReduceLROnPlateau or CosineAnnealingLR to fine-tune over time</li>
+                                    </ul>
+                                    <strong>Additional features:</strong><br>
+                                    <ul>
+                                        <li><strong>Gradient clipping:</strong> Prevents large updates from destabilizing training</li>
+                                        <li><strong>Early stopping:</strong> Halts training if no improvement is seen</li>
+                                        <li>Per-batch learning rate scheduling</li>
+                                        <li><strong>Checkpointing:</strong> Automatically saves the best model</li>
+                                    </ul>
+                                </div>
+                            </details>
+                            <details>
+                                <summary><strong>Step 6: Classification Logic</strong></summary>
+                                <div class="component-details">
+                                    Each analyzed message is assigned a severity level based on a set of heuristic and model-driven features.<br>
+                                    <ul>
+                                        <li><strong>Zero:</strong> Clearly neutral or positive messages</li>
+                                        <li><strong>Low:</strong> Ambiguous tone, moderate negative sentiment, or minor flagged keywords</li>
+                                        <li><strong>High:</strong> Aggressive tone, multiple flagged terms/entities, strong negative sentiment</li>
+                                    </ul>
+                                    <strong>Detection logic includes:</strong><br>
+                                    <ul>
+                                        <li>Sentiment balance metric</li>
+                                        <li>Presence of flagged names or threat indicators</li>
+                                        <li>Adjective density and part-of-speech ratios</li>
+                                        <li>Dynamic sentiment scaling, boosting strong sentiment and downplaying neutral-heavy messages</li>
+                                    </ul>
+                                </div>
+                            </details>
+                            <details>
+                                <summary><strong>Step 7: Performance Evaluation</strong></summary>
+                                <div class="component-details">
+                                    To measure how well our system performs:<br>
+                                    <ul>
+                                        <li>Loss and accuracy metrics are tracked across training epochs</li>
+                                        <li>Models are compared side-by-side (Logistic Regression, SVM, CNN, LSTM)</li>
+                                        <li>Visualizations are used to analyze:</li>
+                                        <ul>
+                                            <li>Loss trends (line plots)</li>
+                                            <li>Accuracy comparisons (bar graphs)</li>
+                                        </ul>
+                                        <li>Final model selection is based on overall accuracy, stability, and real-world interpretability</li>
+                                    </ul>
+                                </div>
+                            </details>
+                        </div>
+                    </details>
+                </div>
+            </details>
+            <details>
+                <summary class="summary-process-headers">BullyBlock Incident Reports:</summary>
+                <div class="component-details">
+                        On the Incidents page, users can access a comprehensive table of all reported incidents. Reports can be filtered by 
+                        "Resolved" and "Pending Review" statuses. Each entry in the table includes:
+                        <ul>
+                            <li><strong>Content ID, User ID, and Username</strong> of the student involved</li>
+                            <li><strong>Severity Level</strong> categorized as <em>Zero, Low, or High</em></li>
+                            <li><strong>Alert Status</strong>, indicating whether the incident has been addressed by school personnel</li>
+                            <li><strong>Timestamp</strong>, displaying the exact date and time of the incident</li>
+                        </ul>
+                        To view the full details of an incident, users can simply click on the corresponding entry in the table.
+                        <div class="screenshot-container">
+                        <img src="images/screenshots/process/IncidentReports.PNG" alt="Incident Reports Table">
+                        <br>
+                        <img src="images/screenshots/process/IncidentDetails.PNG" alt="Incident Details">
+                        </div>
+                </div>
+            </details>
+            <details>
+                <summary class="summary-process-headers">Bullying Analytics:</summary>
+                <div class="component-details">
+                    The Analytics page provides users with detailed insights into bullying incidents and visualizations of the 
+                    BullyBlock AI's performance. It includes:
                     <ul>
-                        <li><strong>Content ID, User ID, and Username</strong> of the student involved</li>
-                        <li><strong>Severity Level</strong> categorized as <em>Low, Medium, or High</em></li>
-                        <li><strong>Alert Status</strong>, indicating whether the incident has been addressed by school personnel</li>
-                        <li><strong>Timestamp</strong>, displaying the exact date and time of the incident</li>
+                        <li>A ranked list of students based on the frequency of reported incidents</li>
+                        <li>An overview of bullying prevalence categorized by severity level</li>
+                        <li>A table highlighting key dates with the highest number of cyberbullying occurrences</li>
                     </ul>
-                    To view the full details of an incident, users can simply click on the corresponding entry in the table.
                     <div class="screenshot-container">
-                    <img src="images/screenshots/process/IncidentReports.PNG" alt="Incident Reports Table">
-                    <br>
-                    <img src="images/screenshots/process/IncidentDetails.PNG" alt="Incident Details">
+                        <img src="images/screenshots/process/BullyingAnalytics.PNG" alt="Analytics">
+                        <br>
+                        <img src="images/screenshots/process/SeverityLevel.PNG" alt="Analytics Stats">
+                        <br>
+                        <img src="images/screenshots/process/Visualizations1.PNG" alt="Visualizations">
+                        <br>
+                        <img src="images/screenshots/process/Visualizations2.PNG" alt="Visualizations">
+                        <br>
+                        <img src="images/screenshots/process/Visualizations3.PNG" alt="Visualizations">
+                        <br>
+                        <img src="images/screenshots/process/Visualizations4.PNG" alt="Visualizations">
                     </div>
-            </div>
+                </div>
+            </details>
+            <details>
+                <summary class="summary-process-headers">Notifications</summary>
+                <div class="component-details">
+                    Notifications alert users to new cyberbullying incidents and status changes of previous cyberbullying incidents.
+                    <div class="screenshot-container">
+                        <img src="images/screenshots/Navbar_notifications.PNG" alt="Notifications">
+                    </div>
+                </div>
+            </details>
 
-            <h3>Bullying Analytics:</h3>
-            <div class="component-details">
-                The Analytics page provides users with detailed insights into bullying incidents and visualizations of the 
-                BullyBlock AI's performance. It includes:
-                <ul>
-                    <li>A ranked list of students based on the frequency of reported incidents</li>
-                    <li>An overview of bullying prevalence categorized by severity level</li>
-                    <li>A table highlighting key dates with the highest number of cyberbullying occurrences</li>
-                </ul>
-                <div class="screenshot-container">
-                    <img src="images/screenshots/process/BullyingAnalytics.PNG" alt="Analytics">
-                    <br>
-                    <img src="images/screenshots/process/SeverityLevel.PNG" alt="Analytics Stats">
-                    <br>
-                    <img src="images/screenshots/process/Visualizations1.PNG" alt="Visualizations">
-                    <br>
-                    <img src="images/screenshots/process/Visualizations2.PNG" alt="Visualizations">
-                    <br>
-                    <img src="images/screenshots/process/Visualizations3.PNG" alt="Visualizations">
-                    <br>
-                    <img src="images/screenshots/process/Visualizations4.PNG" alt="Visualizations">
-                </div>
-            </div>
-            
-            <h3>Notifications</h3>
-            <div class="component-details">
-                Notifications alert users to new cyberbullying incidents and status changes of previous cyberbullying incidents.
-                <div class="screenshot-container">
-                    <img src="images/screenshots/Navbar_notifications.PNG" alt="Notifications">
-                </div>
-            </div>
+            <hr>
 
             <p>The process followed in BullyBlock involves multiple steps to ensure effective cyberbullying detection.</p>
             <ul>
@@ -273,6 +286,8 @@
         <p>Visit <a href="http://www.odu.edu/" target="_blank">Old Dominion University</a> for more information.</p>
         <p>Explore the <a href="http://www.cs.odu.edu/" target="_blank">ODU Computer Science Department</a>.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
