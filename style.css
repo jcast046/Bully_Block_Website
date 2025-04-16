@@ -509,7 +509,7 @@ footer a:hover {
   align-items: center;
   gap: 30px;
   padding: 20px;
-  
+
   margin: 0 auto;
 }
 
@@ -536,7 +536,7 @@ footer a:hover {
 
 .poster-preview {
   width: 100%;
-  
+
   margin: 0 auto;
   overflow: hidden;
   display: flex;
@@ -555,7 +555,7 @@ footer a:hover {
     padding: 10px;
     max-width: 100%;
   }
-  
+
   .download-button {
     padding: 12px 24px;
     font-size: 16px;
@@ -645,27 +645,32 @@ footer a:hover {
 
 /* Remove team-specific styles */
 @media (max-width: 768px) {
-    .card {
-        flex-direction: column;
-        align-items: center;
-    }
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .card img {
-        width: 250px;
-        height: 250px;
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
+  .card img {
+    width: 250px;
+    height: 250px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 
-    .card .card-content {
-        width: 100%;
-        text-align: center;
-    }
+  .card .card-content {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
-    .card img {
-        width: 200px;
-        height: 200px;
-    }
+  .card img {
+    width: 200px;
+    height: 200px;
+  }
+
+  a[id$="-anchor"] {
+    pointer-events: none;
+    cursor: default;
+  }
 }
