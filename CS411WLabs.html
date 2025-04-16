@@ -6,45 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Labs - BullyBlock</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Add this CSS to style.css to make it reusable */
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
-
-    main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 80vh; /* Adjust height as needed */
-        padding: 20px; /* Add padding for spacing */
-    }
-
-    .document-container {
-        text-align: center;
-        max-width: 1600px; /* Increased width for better readability */
-        width: 100%;
-        padding: 20px; /* Optional padding */
-        margin-top: 30px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better focus */
-    }
-
-    .download-link {
-        display: inline-block;
-        margin: 10px;
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-    }
-
-    .download-link:hover {
-        background-color: #0056b3;
-    }
-  </style>
 </head>
 
 <body>
@@ -63,9 +24,14 @@
           <li><a href="features.html">Features</a></li>
           <li><a href="technology.html">Technology</a></li>
           <li><a href="team.html">Team Bio</a></li>
-          <li><a href="process.html">Process</a></li>
-          <li><a href="interface.html">Interface</a></li>
-          <li><a href="task.html">Task</a></li>
+          <li>
+            <a href="#">User Manual</a>
+            <div class="dropdown-content">
+              <a href="process.html">Process</a>
+              <a href="interface.html">Interface</a>
+              <a href="task.html">Task</a>
+            </div>
+          </li>
           <li><a href="presentations.html">Presentations</a></li>
           <li><a href="poster.html">Poster</a></li>
           <li>
@@ -87,8 +53,8 @@
       <h2>CS 411W Labs</h2>
       <div class="document-container">
         <h3>CS 411W Lab 1 Document</h3>
-         <iframe src="https://docs.google.com/document/d/e/2PACX-1vTp3P_wKQ94uZrX1xaXzljGv96ENNz48EbdfEBfTK7ME7416CYdOuOVSzpwEkbsv70R_W5v-89_njpV/pub?embedded=true"
-           width="900" height="700" frameborder="0" allowfullscreen="true"></iframe>
+        <iframe src="https://docs.google.com/document/d/e/2PACX-1vTp3P_wKQ94uZrX1xaXzljGv96ENNz48EbdfEBfTK7ME7416CYdOuOVSzpwEkbsv70R_W5v-89_njpV/pub?embedded=true"
+          frameborder="0" allowfullscreen="true"></iframe>
         <div>
           <a href="https://docs.google.com/document/d/1OqLWDOwGIe9Naktzkntrdi6BK8nBg_JBo7HuVBt3pt0/export?format=pdf" 
              class="download-link" target="_blank" rel="noopener noreferrer">Download as PDF</a>
@@ -98,7 +64,23 @@
              class="download-link" target="_blank" rel="noopener noreferrer">Download as Text</a>
         </div>
       </div>
-    
+      <div class="document-container">
+        <h3>CS 411W Lab 4</h3>
+        <section id="user-guides" style="background: white; border-radius: 8px; padding: 20px; margin: 20px auto; max-width: 1000px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); text-align: center; display: flex; flex-direction: column; align-items: center; box-sizing: border-box; width: 100%;">
+          <h2>User Manual</h2>
+          <div class="wiki-grid">
+            <div class="wiki-item">
+              <a href="process.html">Processes</a>
+            </div>
+            <div class="wiki-item">
+              <a href="interface.html">Interface</a>
+            </div>
+            <div class="wiki-item">
+              <a href="task.html">Tasks</a>
+            </div>
+          </div>
+        </section>
+      </div>
     </section>
   </main>
 
