@@ -1078,4 +1078,12 @@ footer a:hover {
         padding: 1.25rem;
         min-height: auto;
     }
+  
+ /* Getting Started Section small print */
+  ol li.no-number {
+  list-style-type: none;
+  counter-increment: none;
+  margin-left: -1em;
+}
+
 }
