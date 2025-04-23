@@ -672,6 +672,7 @@ footer a:hover {
 
 .guide-section {
   margin: 0;
+  margin-bottom: 20px;
   padding: 20px;
   background: #fff;
   border-radius: 8px;
@@ -848,6 +849,7 @@ footer a:hover {
     font-size: 1.2rem;
     color: #2c3e50;
     margin: 0;
+    text-align: center;
 }
 
 .github-section a {
@@ -870,6 +872,9 @@ footer a:hover {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
     padding: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 40px;
 }
 
 .requirement-card {
@@ -883,6 +888,7 @@ footer a:hover {
     align-items: flex-start;
     text-align: left;
     height: 100%;
+    
 }
 
 .requirement-card:hover {
@@ -926,6 +932,9 @@ footer a:hover {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     padding: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 40px;
 }
 
 .running-step {
@@ -979,12 +988,13 @@ footer a:hover {
     .requirements-grid,
     .running-steps {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 2.5rem;
+        padding: 1.5rem;
     }
     
     .requirement-card,
     .running-step {
-        padding: 1rem;
+        padding: 1.5rem;
     }
     
     .step-number {
